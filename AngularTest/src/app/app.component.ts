@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTest';
+
+  
+@HostListener('click', ['$event'])
+show(){
+  alert("HostListener is working on the show method")
+}
+
+  display(){
+    alert("HostListener is not working on display method");
+  }
+
+
 }
